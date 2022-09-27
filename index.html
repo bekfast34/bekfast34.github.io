@@ -89,7 +89,48 @@
 
 
 <style>
-  
+  @media only screen and (max-width: 600px) {
+  .dpad-button {
+   appearance:none;
+   outline:0;
+   border:0;
+   background:transparent;
+   padding:0;
+   cursor:pointer;
+}
+.dpad-button svg {
+   display:block;
+   height: calc(var(--pixel-size) * 13);
+}
+
+.dpad-button.pressed .Arrow_arrow-inset { stroke:#07c2cc; }
+.dpad-button.pressed .Arrow_arrow-body { stroke:#17dfea; }
+
+.dpad-up {
+   position: absolute;
+   left: calc(var(--pixel-size) * -12);
+   top:0;
+}
+.dpad-down {
+   position: absolute;
+   bottom:var(--pixel-size);
+   left: calc(var(--pixel-size) * -12);
+}
+.dpad-left {
+   position: absolute;
+   top: calc(var(--pixel-size) * -12);
+   left:0;
+}
+.dpad-right {
+   position: absolute;
+   top: calc(var(--pixel-size) * -12);
+   right:0;
+}
+
+.dpad {
+   user-select:none;
+}
+}
   :root {
    --pixel-size: 2px;
    --grid-cell: calc( var(--pixel-size) * 16);
@@ -216,7 +257,7 @@ body {
 }
 .dpad-button svg {
    display:block;
-   height: calc(var(--pixel-size) * 13);
+   height: calc(var(--pixel-size) * 130);
 }
 
 .dpad-button.pressed .Arrow_arrow-inset { stroke:#07c2cc; }
